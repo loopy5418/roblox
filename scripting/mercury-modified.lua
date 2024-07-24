@@ -285,6 +285,7 @@ function Library:object(class, properties)
 		tooltipContainer.Size = UDim2.fromOffset(tooltipContainer.TextBounds.X + 16, tooltipContainer.TextBounds.Y + 8)
 
 		local tooltipArrow = tooltipContainer:object("ImageLabel", {
+			Image = "http://www.roblox.com/asset/?id=4292970642",
 			Theme = {ImageColor3 = {"Main", 10}},
 			AnchorPoint = Vector2.new(0.5, 0),
 			Rotation = 180,
@@ -566,6 +567,7 @@ function Library:create(options)
 		Size = UDim2.fromOffset(14, 14),
 		Position = UDim2.new(1, -11, 0, 11),
 		Theme = {ImageColor3 = "StrongText"},
+		Image = "http://www.roblox.com/asset/?id=8497487650",
 		AnchorPoint = Vector2.new(1)
 	})
 
@@ -605,6 +607,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 5,0.5, 0);
 		Theme = {ImageColor3 = "Tertiary"},
 		Size = UDim2.fromOffset(16, 16),
+		Image = "http://www.roblox.com/asset/?id=8497489946",
 		BackgroundTransparency = 1
 	})
 
@@ -686,6 +689,7 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 5, 0.5, 0),
 		Size = UDim2.new(0, 15, 0, 15),
+		Image = "http://www.roblox.com/asset/?id=8569322835",
 		Theme = {ImageColor3 = "StrongText"}
 	})
 
@@ -824,6 +828,7 @@ function Library:create(options)
 		Size = UDim2.fromOffset(24, 24),
 		Position = UDim2.new(1, -10, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
+		Image = "http://www.roblox.com/asset/?id=8559790237"
 	}):tooltip("settings")
 
 	local creditsTabIcon = profile:object("ImageButton", {
@@ -832,6 +837,7 @@ function Library:create(options)
 		Size = UDim2.fromOffset(24, 24),
 		Position = UDim2.new(1, -44, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
+		Image = "http://www.roblox.com/asset/?id=8577523456"
 	}):tooltip("credits")
 
 	local quickAccess = homePage:object("Frame", {
@@ -908,13 +914,13 @@ function Library:create(options)
 	local creditsTab = Library.tab(mt, {
 		Name = "Credits",
 		Internal = creditsTabIcon,
+		Icon = "http://www.roblox.com/asset/?id=8577523456"
 	})
 
 	rawset(mt, "creditsContainer", creditsTab.container)
 
 	creditsTab:credit{Name = "Loopy5418", Description = "Script Owner & Main Developer", Discord = "loopy5418"}
-	creditsTab:credit{Name = "Deity", Description = "Creator of this UI library", Discord = "Deity#0228", Github="https://github.com/deeeity/mercury-lib"}
-
+	creditsTab:credit{Name = "Deity", Description = "Creator of this UI library", Github="https://github.com/deeeity/mercury-lib"}
 	return mt
 end
 
@@ -930,7 +936,7 @@ function Library:notification(options)
 
 	local noti = self.notifs:object("Frame", {
 		BackgroundTransparency = 1,
-	   Theme = {BackgroundColor3 = "Main"},
+		Theme = {BackgroundColor3 = "Main"},
 		Size = UDim2.new(0, 300,0, 0)
 	}):round(10)
 
@@ -984,6 +990,7 @@ function Library:notification(options)
 	})
 
 	local exit = noti:object("ImageButton", {
+		Image = "http://www.roblox.com/asset/?id=8497487650",
 		AnchorPoint = Vector2.new(1, 0),
 		ImageColor3 = Color3.fromRGB(255, 255, 255),
 		Position = UDim2.new(1, -3,0, 3),
@@ -1288,6 +1295,8 @@ function Library:toggle(options)
 		Size = UDim2.new(1, -20, 0, 52)
 	}):round(7)
 
+	local on = "http://www.roblox.com/asset/?id=8498709213"
+	local off = "http://www.roblox.com/asset/?id=8498691125"
 
 	local toggled = options.StartingState
 
@@ -2768,8 +2777,9 @@ function Library:credit(options)
 				Size = UDim2.fromOffset(24, 24),
 				Position = UDim2.new(1, -8, 1, -8),
 				Theme = {BackgroundColor3 = {"Main", 10}}
-			}):round(5):tooltip("Copy GitHub")
+			}):round(5):tooltip("copy github")
 			local github = githubContainer:object("ImageLabel", {
+				Image = "http://www.roblox.com/asset/?id=11965755499",
 				Size = UDim2.new(1, -4, 1, -4),
 				Centered = true,
 				BackgroundTransparency = 1
@@ -2786,7 +2796,7 @@ function Library:credit(options)
 				Size = UDim2.fromOffset(24, 24),
 				Position = UDim2.new(1, -8, 1, -8),
 				BackgroundColor3 = Color3.fromRGB(88, 101, 242)
-			}):round(5):tooltip("Copy Discord")
+			}):round(5):tooltip("copy discord")
 			local discord = discordContainer:object("Frame", {
 				Size = UDim2.new(1, -6, 1, -6),
 				Centered = true,
@@ -2799,6 +2809,7 @@ function Library:credit(options)
 				Size = UDim2.new(0.5, 0, 0.5, 0),
 				Position = UDim2.new(1, 0, 0, -0),
 				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594150191",
 				ScaleType = Enum.ScaleType.Crop
 			})
 
@@ -2808,6 +2819,7 @@ function Library:credit(options)
 				Size = UDim2.new(0.5, 0, 0.5, 0),
 				Position = UDim2.new(0, 0, 0, -0),
 				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594187532",
 				ScaleType = Enum.ScaleType.Crop
 			})
 
@@ -2817,6 +2829,7 @@ function Library:credit(options)
 				Size = UDim2.new(0.5, 0, 0.5, 0),
 				Position = UDim2.new(0, 0, 1, 0),
 				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594194954",
 				ScaleType = Enum.ScaleType.Crop
 			})
 
@@ -2826,6 +2839,7 @@ function Library:credit(options)
 				Size = UDim2.new(0.5, 0, 0.5, 0),
 				Position = UDim2.new(1, 0, 1, 0),
 				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594206483",
 				ScaleType = Enum.ScaleType.Crop
 			})
 
@@ -2840,8 +2854,9 @@ function Library:credit(options)
 				Size = UDim2.fromOffset(24, 24),
 				Position = UDim2.new(1, -40, 1, -8),
 				Theme = {BackgroundColor3 = {"Main", 10}}
-			}):round(5):tooltip("Copy V3rmillion")
+			}):round(5):tooltip("copy v3rm")
 			local v3rmillion = v3rmillionContainer:object("ImageLabel", {
+				Image = "http://www.roblox.com/asset/?id=8594086769",
 				Size = UDim2.new(1, -4, 1, -4),
 				Centered = true,
 				BackgroundTransparency = 1
@@ -3426,6 +3441,7 @@ function Library:textbox(options)
 	}):round(5):stroke("Tertiary")
 
 	local writeIcon = textboxContainer:object("ImageLabel", {
+		Image = "http://www.roblox.com/asset/?id=8569329416",
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -13, 0.5, 0),
